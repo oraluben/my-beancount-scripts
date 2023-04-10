@@ -91,6 +91,8 @@ class AlipayProve(Base):
                         entry, trade_account, '-' + amount_string, 'CNY')
                     data.create_simple_posting(
                         entry, account, None, None)
+                elif status in ['交易关闭']:
+                    pass
                 else:
                     print(row)
                     print(status)
